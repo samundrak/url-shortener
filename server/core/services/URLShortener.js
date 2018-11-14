@@ -2,8 +2,8 @@ const shortId = require('shortid');
 const URLShortenerRepository = require('../repositories/URLShortenerRepository');
 
 class URLShortener {
-  async create(url) {
-    const shortUrlId = shortId.generate();
+  async create(url, aliasForShortUrl = null) {
+    const shortUrlId = aliasForShortUrl || shortId.generate();
     const document = {
       url,
       short_url_id: shortUrlId,

@@ -9,7 +9,14 @@ module.exports = {
   async create(req, res) {
     try {
       const url = req.body.url;
+      const aliasForShortUrl = req.body.aliasForShorUrl;
       const urlShortener = new URLShortener();
+      if (aliasForShortUrl) {
+        const aliasDocument = await urlShortener.fetchDocumentByUrlId(aliasForShortUrl);
+        if (aliasDocument) {
+          return res.boom.conflict('This alias has been already taken, please try other alias.');
+        }
+      }
       const oldDocument = await urlShortener.fetchDocumentByUrl(url);
       if (oldDocument) {
         return res.json({
@@ -18,7 +25,7 @@ module.exports = {
           original_url: url,
         });
       }
-      const savedDocument = await urlShortener.create(url);
+      const savedDocument = await urlShortener.create(url, aliasForShortUrl);
       return res.json({
         message: 'New short url created',
         short_url: `${process.env.APP_HOST}/${savedDocument.short_url_id}`,

@@ -5,4 +5,6 @@ module.exports = yup.object().shape({
     .string()
     .url()
     .required(),
+  isAlias: yup.boolean(),
+  aliasForShorUrl: yup.string().when('isAlias', { is: true, then: yup.string().required('Please enter alias for url.') }),
 });
