@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node server/core/app.js",
     "dev": "nodemon server/core/app.js --watch server/core",
-    "mongo": "sudo mongod",
+    "dep": "sudo mongod",
     "build": "next build src/",
     "heroku-postbuild": "./node_modules/next/dist/bin/next build src/ && touch .env",
     "test": "export NODE_ENV=testing && jest"
