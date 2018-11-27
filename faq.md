@@ -3,6 +3,16 @@
 A malicous user can enter same url to fill database with same url so to prevent this i have worked on both
 frontend and backend.
 
+## Dependencies
+
+- `cors` Helps us protect from any cors related issue
+- `helmet` Sends security related headers
+- `winston` Simple logger transport layer for logging
+- `next` For server side rendering, static pages and routing
+- `react` UI library
+- `yup` Object schema validator used for request/form validation
+- `axios` Simple isomorphic http client
+
 ### Backend
 
 - We have rate limited our API so a malicous user can't request multiple times in certain window
