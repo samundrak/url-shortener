@@ -4,7 +4,7 @@ A simple URL shortener
 
 # Requirements
 
-- Node.js & NPM v8.4.0
+- Node.js v10.x & NPM v6.2
 - Mongo 2.2.3
 
 # Install
@@ -17,5 +17,5 @@ A simple URL shortener
 # Run
 
 - Copy file `.env.example` to `.env` and change env details if needed
-- After doing seed and running dependencies, run `npm start`
+- `npm start`
 - Then visit http://localhost:3000 to access app

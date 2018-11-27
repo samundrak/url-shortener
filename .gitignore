@@ -9,3 +9,4 @@ dump.rdb
 storage/logs
 src/.next/
 server/src/.next/
+.next/

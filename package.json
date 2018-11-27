@@ -1,17 +1,18 @@
 {
-  "name": "SimpleForum",
+  "name": "Simple URL Shortener",
   "version": "1.0.0",
   "main": "server/core/app.js",
-  "description": "A simple forum.",
+  "description": "A simple url shortener.",
   "author": "Samundra Kc",
   "license": "MIT",
   "scripts": {
-    "start": "npm-run-all -s open:server",
-    "open:frontend": "next src/ -p 3001",
+    "start": "node server/core/app.js",
+    "open:frontend": "next src/",
+    "dev": "next src/",
     "open:server": "nodemon server/core/app.js --watch server/core",
     "mongo": "sudo mongod",
-    "dep": "npm-run-all --parallel mongo",
-    "seed": "node ./seeds/index.js",
+    "build": "next build src/",
+    "heroku-postbuild": "./node_modules/next/dist/bin/next build",
     "test": "export NODE_ENV=testing && jest"
   },
   "dependencies": {
@@ -36,6 +37,7 @@
     "faker": "^4.1.0",
     "helmet": "^3.15.0",
     "jade": "1.11.0",
+    "mongo": "^0.1.0",
     "mongoose": "4.6.4",
     "morgan": "1.7.0",
     "next": "^4.2.3",
@@ -79,5 +81,8 @@
   },
   "repository": {
     "type": "git"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }

@@ -16,7 +16,7 @@ const Promise = require('bluebird');
 const helper = require('./utils/helper');
 const winstonLogsDisplay = require('winston-logs-display');
 const next = require('next');
-const helmet = require('helmet')
+const helmet = require('helmet');
 
 const dev = process.env.NODE_ENV !== 'production';
 const nextApp = next({ dev, dir: path.join(__dirname, '../../src') });
@@ -27,7 +27,7 @@ const apiLimiter = rateLimit({
 });
 // app.enable("trust proxy"); // only if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
 nextApp
-  .prepare()
+  .prepare({ dir: path.join(__dirname, '../../') })
   .then(() => {
     const app = express();
     app.set('env', process.env.NODE_ENV);
@@ -43,7 +43,7 @@ nextApp
 
     routes = routes(app);
     const port = appConfig.app.port;
-    
+
     app.use(helmet());
     app.use(cors());
     app.use(boom());
