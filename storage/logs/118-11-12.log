@@ -1,0 +1,9 @@
+{"level":"error","message":"URLShortenerModel.save is not a function","timestamp":"2018-11-12T11:24:31.025Z"}
+{"level":"error","message":"URLShortener.fetch is not a function","timestamp":"2018-11-12T11:54:18.570Z"}
+{"level":"error","message":"Cast to string failed for value \"{ short_url_id: undefined }\" at path \"short_url_id\"","timestamp":"2018-11-12T11:54:42.603Z"}
+{"level":"error","message":"Cast to string failed for value \"{ short_url_id: undefined }\" at path \"short_url_id\"","timestamp":"2018-11-12T11:55:52.609Z"}
+{"level":"error","message":"Cast to string failed for value \"{ short_url_id: 'O_W9o1cLX' }\" at path \"short_url_id\"","timestamp":"2018-11-12T11:56:18.079Z"}
+{"level":"error","message":"Cast to string failed for value \"{ short_url_id: 'O_W9o1cLX' }\" at path \"short_url_id\"","timestamp":"2018-11-12T11:56:26.626Z"}
+{"level":"error","message":"Cannot read property 'url' of null","timestamp":"2018-11-12T11:57:08.522Z"}
+{"level":"error","message":"Cannot read property 'url' of null","timestamp":"2018-11-12T11:57:10.875Z"}
+{"level":"error","message":"Cannot read property 'url' of null","timestamp":"2018-11-12T11:57:54.912Z"}
