@@ -1,6 +1,5 @@
 const env = process.env;
 
-process.env.PORT = process.env.$PORT;
 process.env.APP_HOST = `http://localhost:${env.PORT}`;
 const config = {
   app: {
