@@ -17,7 +17,7 @@
     "antd": "^3.1.4",
     "auto-bind": "1.1.0",
     "axios": "0.15.2",
-    "bcrypt": "^3.0.2",
+    "bcrypt": "^5.0.0",
     "bluebird": "3.5.0",
     "body-parser": "1.15.2",
     "chalk": "2.1.0",
