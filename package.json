@@ -16,7 +16,7 @@
   "dependencies": {
     "antd": "^3.1.4",
     "auto-bind": "1.1.0",
-    "axios": "0.15.2",
+    "axios": "0.21.1",
     "bcrypt": "^3.0.2",
     "bluebird": "3.5.0",
     "body-parser": "1.15.2",
