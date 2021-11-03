@@ -48,7 +48,7 @@
     "render-if": "^0.1.1",
     "resource-router-middleware": "^0.7.0",
     "shortid": "^2.2.14",
-    "validator": "8.0.0",
+    "validator": "13.7.0",
     "winston": "2.3.1",
     "winston-logs-display": "0.1.1",
     "yup": "^0.26.6"
